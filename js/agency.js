@@ -92,7 +92,6 @@ function  workLoad() {
         newHTML = '/work/'+ newfolder + "/index.html";
 
     $('.project-load').html(spinner).load(newHTML);
-    console.log("loadAjax: " + newHTML);
     $('.project-title').text(newTitle);
   });
 

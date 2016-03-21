@@ -381,21 +381,26 @@ label{
 
   /* End of gross / hackey CSS */
   .work-belt {
-    width: 200%;
+    width: 250%;
     position: relative;
     left: 0%;
     -webkit-transition: all, 800ms;
     -moz-transition: all, 800ms;
     transition: all, 800ms; }
     .work-belt.slided {
-      -webkit-transform: translate3d(-50%, 0, 0);
-      -moz-transform: translate3d(-50%, 0, 0);
-      -ms-transform: translate3d(-50%, 0, 0);
-      -o-transform: translate3d(-50%, 0, 0);
-      transform: translate3d(-50%, 0, 0); }
+      -webkit-transform: translate3d(-60%, 0, 0);
+      -moz-transform: translate3d(-60%, 0, 0);
+      -ms-transform: translate3d(-60%, 0, 0);
+      -o-transform: translate3d(-60%, 0, 0);
+      transform: translate3d(-60%, 0, 0); }
 
+  .work-middle{
+    width: 20%;
+    height: 1px;
+    float: left;
+  }
   .thumb-wrap, .work-wrap {
-    width: 50%;
+    width: 40%;
     float: left; }
 
   .work-container {
@@ -408,6 +413,7 @@ label{
     position: relative;
     display: none; }
     .work-container h4, .work-container noscript h4 {
+      padding-left: 50px;
       color: #c99065;
       font-weight: 300;
       text-transform: uppercase;
@@ -423,8 +429,7 @@ label{
       cursor: pointer;
       opacity: 0.5;
       position: absolute;
-      top: -4px;
-      left: -60px; }
+      top: -4px; }
       .work-container .work-return path {
         fill: rgba(255, 255, 255, 1); }
       .work-container .work-return:hover {
@@ -445,25 +450,6 @@ label{
   border: none;
   background-color: #222;
   box-shadow: black 1px 1px 5px;
-}
-
-@media(min-width:768px) {
-    .navbar-default {
-        border: 0;
-        background-color: transparent;
-        -webkit-transition: padding .3s;
-        -moz-transition: padding .3s;
-        transition: padding .3s;
-    }
-
-    .navbar-default .navbar-brand {
-        position: relative;
-        z-index: 1;
-        font-size: 2em;
-        -webkit-transition: all .3s;
-        -moz-transition: all .3s;
-        transition: all .3s;
-    }
 }
 
 header {
@@ -663,30 +649,6 @@ header .intro-text .intro-heading {
     line-height: 50px;
 }
 
-@media(min-width:768px) {
-    header .intro-text {
-        padding-top: 300px;
-        padding-bottom: 200px;
-    }
-
-    header .intro-text .intro-lead-in {
-        margin-bottom: 25px;
-        font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
-        font-size: 40px;
-        font-style: italic;
-        line-height: 40px;
-    }
-
-    header .intro-text .intro-heading {
-        margin-bottom: 50px;
-        text-transform: uppercase;
-        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-        font-size: 75px;
-        font-weight: 700;
-        line-height: 75px;
-    }
-}
-
 section {
     padding: 100px 0;
     background: none;
@@ -720,6 +682,9 @@ section h3.section-subheading {
 #work .portfolio-item {
     right: 0;
     margin: 0 0 15px;
+    display: table;
+    padding-bottom: 20px;
+    margin: auto;
 }
 
 #work .portfolio-item .portfolio-link {
@@ -989,8 +954,55 @@ section h3.section-subheading {
 }
 
 @media(min-width:768px) {
+  .work-container h4 {
+    padding-left: 0px;
+  }
+
+  .work-container .work-return{
+    left: -60px;
+  }
+
+  .navbar-default {
+      border: 0;
+      background-color: transparent;
+      -webkit-transition: padding .3s;
+      -moz-transition: padding .3s;
+      transition: padding .3s;
+  }
+
+  .navbar-default .navbar-brand {
+      position: relative;
+      z-index: 1;
+      font-size: 2em;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      transition: all .3s;
+  }
+
+    header .intro-text {
+        padding-top: 300px;
+        padding-bottom: 200px;
+    }
+
+    header .intro-text .intro-lead-in {
+        margin-bottom: 25px;
+        font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 40px;
+        font-style: italic;
+        line-height: 40px;
+    }
+
+    header .intro-text .intro-heading {
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 75px;
+        font-weight: 700;
+        line-height: 75px;
+    }
+
     .timeline{
-      margin-left: 0px;
+      margin-left: 20px;
     }
 
     .timeline:before {
@@ -1039,6 +1051,10 @@ section h3.section-subheading {
 }
 
 @media(min-width:992px) {
+    .timeline{
+      margin-left: 0px;
+    }
+
     .face-lockup{
       max-width: 850px;
     }

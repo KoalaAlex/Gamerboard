@@ -40,7 +40,6 @@ $('.timeline-panel').click(function() {
 
 // Waypoint
 var timelineFirstPoint = $('.timeline li:first-child').waypoint(function(direction) {
-  console.log(this.element.id + ' hit 50% from top of window')
   $(this.element).addClass('expand');
   this.destroy();
 }, {
@@ -93,6 +92,7 @@ function  workLoad() {
         newHTML = 'work/'+ newfolder;
 
     $('.project-load').html(spinner).load(newHTML);
+    console.log("loadAjax: " + newHTML);
     $('.project-title').text(newTitle);
   });
 

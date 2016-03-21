@@ -89,7 +89,7 @@ function  workLoad() {
         newTitle = $this.find('.portfolio-caption h4').text(),
         newfolder = $this.find('.portfolio-item').data('folder'),
         spinner = '<div class="loader">Loading...</div>',
-        newHTML = '/work/'+ newfolder;
+        newHTML = '/work/'+ newfolder + "/index.html";
 
     $('.project-load').html(spinner).load(newHTML);
     console.log("loadAjax: " + newHTML);

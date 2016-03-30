@@ -8,10 +8,6 @@ body {
     overflow-x: hidden;
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: white;
-    background: url(../img/backgrounds/stardust.png);
-    /* background: url(../img/backgrounds/swirl_pattern.png); */
-    /* background: url(../img/backgrounds/geometry2.png); */
-    /* background: url(../img/backgrounds/hexellence.png); */
 }
 
 .text-muted {
@@ -232,6 +228,23 @@ fieldset[disabled] .btn-xl.active {
   position: relative;
     border-color: rgba(255,255,255,.02);
 }
+.navbar-default .navbar-collapse.collapse.in{
+  position: absolute;
+  top: 0px;
+  display:flex;
+  margin: auto;
+  left: 0px;
+  height: 100vh;
+  width: 100%;
+  max-height: none;
+  padding: 0px;
+  background-color: rgba(0,0,0,0.25);
+}
+
+.navbar-default .navbar-collapse.collapse.in ul{
+  margin: auto;
+  padding: 0px;
+}
 
 .navbar-default .navbar-toggle {
     border-color: #FF6643;
@@ -273,8 +286,8 @@ fieldset[disabled] .btn-xl.active {
     background-color: rgba(0,0,0,0);
 }
 
-/*
 #nav-line{
+  display: none;
   position: absolute;
   background: #f6522c;
   width: 100px;
@@ -288,7 +301,7 @@ fieldset[disabled] .btn-xl.active {
 
 ul li:nth-child(3).active #nav-line{
   width: 200px;
-} */
+}
 
 .timeline-end{
   display: flex;
@@ -455,14 +468,6 @@ label{
 header {
     text-align: center;
     color: #fff;
-    background-attachment: scroll;
-    background-image: url(../img/hero-bg.jpg);
-    background-position: center center;
-    background-repeat: none;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
     box-shadow: black 0px 0px 10px;
 }
 
@@ -626,10 +631,37 @@ header {
     .skill-lockup .skill-unit {
       width: 220px; } }
 /* End About */
+body .bg-body {
+  position: absolute;
+  width: 100%;
+  background: url(../img/backgrounds/stardust.png);
+  /* background: url(../img/backgrounds/swirl_pattern.png); */
+  /* background: url(../img/backgrounds/geometry2.png); */
+  /* background: url(../img/backgrounds/hexellence.png); */
+}
+
+header .container{
+  position: fixed;
+  width: 100%;
+  background-attachment: scroll;
+  background-image: url(../img/hero-bg.jpg);
+  background-position: center center;
+  background-repeat: none;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+header .intro-text, header .intro-overlay {
+    height: 100vh;
+}
 
 header .intro-text {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
 }
 
 header .intro-text .intro-lead-in {
@@ -954,6 +986,10 @@ section h3.section-subheading {
 }
 
 @media(min-width:768px) {
+  #nav-line{
+    display: block;
+  }
+
   .work-container h4 {
     padding-left: 0px;
   }
@@ -978,11 +1014,6 @@ section h3.section-subheading {
       -moz-transition: all .3s;
       transition: all .3s;
   }
-
-    header .intro-text {
-        padding-top: 300px;
-        padding-bottom: 200px;
-    }
 
     header .intro-text .intro-lead-in {
         margin-bottom: 25px;
